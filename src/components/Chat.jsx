@@ -64,8 +64,8 @@ const Chat = () => {
                     <div className="main ">
                         {messages.map((message, index) => (
                             <Row key={index}>
-                                <Col className={message.user == 'Learner' ? 'question' : 'answer '}>
-                                    <div className={message.user != 'Learner' ? 'border-bottom p-2 bg-info-subtle' : 'border-bottom p-2'}>
+                                <Col className={message.user === 'Learner' ? 'question' : 'answer '}>
+                                    <div className={message.user !== 'Learner' ? 'border-bottom p-2 bg-info-subtle' : 'border-bottom p-2'}>
                                         <strong>{message.user}</strong>: {message.text}
                                     </div>
                                 </Col>
