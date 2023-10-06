@@ -53,6 +53,7 @@ git pull
 ```
 
 ### Configure the UI
+
 you need to create a file called `.env` in the root directory of the UI, and add the following variables
 
 ```bash
@@ -81,12 +82,29 @@ As we mentioned before, we will not create an image for the docker, we only use 
 To run the UI, we need to mount the build folder to the nginx container.
 
 ```bash
-sudo docker run -d -p 80:80 -v /home/ubuntu/MosesUI/build:/usr/share/nginx/html:ro  nginx 
+sudo docker run -d -p 80:80 -v /home/ubuntu/MosesUI/build:/usr/share/nginx/html:ro -v /home/ubuntu/MosesUI/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro  nginx 
 ```
+
+NOTE:
+
+- This guide assumes that you are cloning the repository to the home directory of the user `ubuntu`.
+- You need to change the paths to the build folder and config file based on your setup.
 
 Now you can access the UI at `http://<your-ip>/`
 
 You don't need to restart the container after each update, just run the build command and refresh the page.
+
+## Run by using npm
+
+If you want to run the UI without docker, you can do so by using `npm start`
+
+This is not practical nor recommended for production since it would be very slow and will lock you to port 3000, but it
+is useful for development.
+
+```bash
+cd MosesUI
+npm start
+```
 
 ## Important notes
 
