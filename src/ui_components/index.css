@@ -5,8 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(52,53,65);
-  color: white;
 }
 
 code {
@@ -15,15 +13,12 @@ code {
 }
 
 .main {
-  padding-top: 20px;
-  height: calc(100vh - 92px);
-  overflow: auto;
-  margin-bottom: 12px;
+  height: calc(100vh - 150px);
 }
 
 .question-button
 {
-  background-color: transparent;
+  background-color: black;
   border: none;
   color: white;
   cursor: pointer;
@@ -36,20 +31,18 @@ code {
 
 .question-button:hover
 {
-  background-color: #7b7b7b;
+
 }
 
 .question-input
 {
-  width: 98%;
+  width: 100%;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   height: 40px;
   border-radius: 5px;
   border-color: gray;
-  background-color: rgb(64,65,79);
-  color: white;
   border-width: 1px;
   border-style: solid;
   padding-left: 9px;
@@ -64,23 +57,6 @@ code {
 {
   width: 100%;
   text-align: center;
-}
-
-.question
-{
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.answer
-{
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  background-color: rgb(68,70,84);
 }
 
 
@@ -98,11 +74,7 @@ code {
 
 .dots-container {
   display: flex;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: rgb(68,70,84);
+  padding: 20px;
 }
 
 .dot {
